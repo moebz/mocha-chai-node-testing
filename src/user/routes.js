@@ -4,7 +4,8 @@ const { UserController } = require("./controller");
 const { UserService } = require("./service");
 const { UserRepository } = require("./repository");
 
-const userService = new UserService(UserRepository);
+const userRepository = new UserRepository();
+const userService = new UserService(userRepository);
 const userController = new UserController(userService);
 
 router.post("/user", (req, res) => userController.register(req, res));

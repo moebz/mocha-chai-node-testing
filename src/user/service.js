@@ -1,6 +1,6 @@
 class UserService {
-  constructor(UserRepository) {
-    this.userRepository = new UserRepository();
+  constructor(userRepository) {
+    this.userRepository = userRepository;
   }
 
   async create(name, email) {
