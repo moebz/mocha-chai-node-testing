@@ -12,7 +12,6 @@ class UserRepository {
     });
   }
   async getUser(id) {
-    console.log({sdfasadfsafsafdid: id});
     return this.user.findOne({
       where: {
         id: id,

@@ -15,7 +15,7 @@ class UserController {
       typeof email !== "string"
     ) {
       return res.status(status.BAD_REQUEST).json({
-        message: "Invalid Params",
+        message: "Invalid params",
       });
     }
     const user = await this.userService.create(name, email);

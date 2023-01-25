@@ -7,7 +7,7 @@ const { UserRepository } = require("./repository");
 
 describe("UserRepository", function () {
   const stubValue = {
-    id: faker.random.uuid(),
+    id: faker.datatype.uuid(),
     name: faker.name.findName(),
     email: faker.internet.email(),
     createdAt: faker.date.past(),
@@ -16,7 +16,7 @@ describe("UserRepository", function () {
   describe("create", function () {
     it("should add a new user", async function () {
       const stubValue = {
-        id: faker.random.uuid(),
+        id: faker.datatype.uuid(),
         name: faker.name.findName(),
         email: faker.internet.email(),
         createdAt: faker.date.past(),

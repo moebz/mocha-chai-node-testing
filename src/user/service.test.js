@@ -9,7 +9,7 @@ describe("UserService", function () {
   describe("create", function () {
     it("should create a new user", async function () {
       const stubValue = {
-        id: faker.random.uuid(),
+        id: faker.datatype.uuid(),
         name: faker.name.findName(),
         email: faker.internet.email(),
         createdAt: faker.date.past(),
@@ -30,7 +30,7 @@ describe("UserService", function () {
   describe("getUser", function () {
     it("should return a user that matches the provided id", async function () {
       const stubValue = {
-        id: faker.random.uuid(),
+        id: faker.datatype.uuid(),
         name: faker.name.findName(),
         email: faker.internet.email(),
         createdAt: faker.date.past(),
