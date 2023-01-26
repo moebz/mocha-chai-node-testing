@@ -10,6 +10,9 @@ const sequelize = new Sequelize(
   {
     host: enviroment.RDB_HOST,
     dialect: "postgres",
+    define: {
+      freezeTableName: true, // use the model name for the table exactly as it is (don't pluralize it)
+    }
   }
 );
 
